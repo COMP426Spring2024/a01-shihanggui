@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background1">
+    <div class="talesIntro">
+        <h1>Two Tales of Chang'e</h1>
+    </div>
+    <label for="selectContent">Click here switch!</label>
+    <select id="selectContent" onchange="switchContent()">
+        <option value="content1">Chang'e Drinks the Elixir of Immortality</option>
+        <option value="content2">Journey to the West</option>
+
+    </select>
+
+    <div id="content1" class="content visible">
+        <div class="container">
+            <div id="mythParagraph1">
+                <p>When the earth was still young, there were ten suns in the sky. It was extremely hot all the time and
+                    there was no such thing as night.
+                    The extreme heat made it hard to farm crops and endangered entire populations.
+
+                    One day, a skilled archer named Hou Yi decided that enough was enough. He raised his bow to the
+                    heavens
+                    and shot down nine of the ten suns.
+                    To reward him for his heroic deeds, the goddess Xiwangmu gave him an elixir of immortality, a prize
+                    typically reserved for immortals who had
+                    achieved enlightenment.
+                    Chang'e soon discovered her husband's gift and began to devise a plan. That night, she found the
+                    elixir
+                    under their bed and drank every last drop.
+                    Realizing that his wife was not in bed with him, Hou Yi ran outside to find her drifting into the
+                    night
+                    sky.<br><br>
+                    Hou Yi was so angry that he grabbed his bow and tried to shoot Chang'e down; he missed every shot.
+                    As
+                    time went by, Hou Yi's anger subsided and he began
+                    to miss his wife. He would often stare up at the moon and think about how lonely Chang'e must be. In
+                    the
+                    hopes that it might make Chang'e feel less alone
+                    (and to show that he was no longer mad at her), Hou Yi started leaving her favorite desserts and
+                    fruits
+                    out every night. He continued this practice until
+                    the day he died. This tradition continues today, as many people leave annual offerings to Chang'e
+                    during
+                    the Mid-Autumn Festival.
+
+
+                </p>
+            </div>
+
+            <div>
+                <img src="change1.jpeg" id="mythImage1">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="content2" class="content">
+        <div class="container">
+            <div id="mythParagraph2">
+                <p>
+                    In Journey to the West by Wu Cheng'en, the pig demon, Zhu Baijie is punished for flirting with 
+                    Chang'e on a cloudless night. Once the heavenly commander of the Jade Emperor's naval forces, 
+                    Zhu Baijie is stripped of his post and banished to the mortal realm as a demon for his amorous 
+                    advances towards the moon goddess.
+                </p>
+            </div>
+            <img src="zhubajie.jpeg" id="mythImage2">
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="returnbox">
+        <a href="index.html" target="_top" style="color: black;">Back to Main Page</a>
+        
+        </div>
+
+    <script>
+        function switchContent() {
+            // Get the selected option value
+            var selectedContent = document.getElementById("selectContent").value;
+
+            // Hide all content divs
+            var allContentDivs = document.querySelectorAll('.content');
+            allContentDivs.forEach(function (contentDiv) {
+                contentDiv.classList.remove('visible');
+            });
+
+            // Show the selected content div
+            var selectedContentDiv = document.getElementById(selectedContent);
+            selectedContentDiv.classList.add('visible');
+        }
+    </script>
+    </div>
+
+</body>
+
+</html>
